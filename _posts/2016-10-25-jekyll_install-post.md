@@ -17,20 +17,21 @@ Before I start (and before you comment) I'd like to say that like anything else 
 
  OK, let's get started.
 
+
 ## Jekyll Dependencies 
 
 If you wanna create a simplistic but powerful blog like this one the first thing you are are going to have to do is make sure you have the tools to do the job.
 
 * Ruby (including development headers, v1.9.3+ for Jekyll 2 and v2+ for Jekyll 3)
 * RubyGems
-* NodeJS or another JavaScript runtime (Jekyll 2 and earlier, for CoffeeScript support)
+* NodeJS 
 * Python 2.7 (for Jekyll 2 and earlier) or Python 3+ for Jekyll 3+)
 
 First you will need to check and see if you have Ruby installed. Open your terminal and run.
 
 ```
 userone@laptop:~/Desktop/$ ruby -v
-ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ruby 2.3.0p0 (2015-12-25) [x86_64-linux]
 
 ```
 If it returns something simular then you are all good and can proceed to the next dependency. If you need to install ruby and want to install version 2.3.1 enter the following commands into the terminal
@@ -102,7 +103,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 You should have all the dependencies installed and be able to install Jekyll without any errors.
 
-## Install Jekyll.
+
+## Install Jekyll
 
 Simply run the following command.
 

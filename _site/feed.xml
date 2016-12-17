@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-17T09:03:56-05:00</updated><id>http://localhost:4000/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Installing Jekyll</title><link href="http://localhost:4000/jekyll_install-post/" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://localhost:4000/jekyll_install-post</id><content type="html" xml:base="http://localhost:4000/jekyll_install-post/">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-17T09:10:07-05:00</updated><id>http://localhost:4000/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Installing Jekyll</title><link href="http://localhost:4000/jekyll_install-post/" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://localhost:4000/jekyll_install-post</id><content type="html" xml:base="http://localhost:4000/jekyll_install-post/">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
 
 &lt;p&gt;Over the past few months I have spent countless hours scouring the web for tutorials that will help solidify my web develoment skills. The internet offers many free tutorials on just about every topic you can think.  After a few hours of searching and start or restarting variuos tutorials I figured out that not all web tutorials are created equal.  In light of this I thought I’d take the time to create a few up to date (As of 10/15/2016) tutorials that may help other web development students steer clear of google rabbit holes and stackoverflow loops.&lt;/p&gt;
 
@@ -13,14 +13,14 @@
 &lt;ul&gt;
   &lt;li&gt;Ruby (including development headers, v1.9.3+ for Jekyll 2 and v2+ for Jekyll 3)&lt;/li&gt;
   &lt;li&gt;RubyGems&lt;/li&gt;
-  &lt;li&gt;NodeJS or another JavaScript runtime (Jekyll 2 and earlier, for CoffeeScript support)&lt;/li&gt;
+  &lt;li&gt;NodeJS&lt;/li&gt;
   &lt;li&gt;Python 2.7 (for Jekyll 2 and earlier) or Python 3+ for Jekyll 3+)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;First you will need to check and see if you have Ruby installed. Open your terminal and run.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/Desktop/$ ruby -v
-ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ruby 2.3.0p0 (2015-12-25) [x86_64-linux]
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -93,7 +93,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
 &lt;p&gt;You should have all the dependencies installed and be able to install Jekyll without any errors.&lt;/p&gt;
 
-&lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll.&lt;/h2&gt;
+&lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h2&gt;
 
 &lt;p&gt;Simply run the following command.&lt;/p&gt;
 
