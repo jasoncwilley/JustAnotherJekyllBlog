@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-17T09:10:07-05:00</updated><id>http://localhost:4000/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Installing Jekyll</title><link href="http://localhost:4000/jekyll_install-post/" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://localhost:4000/jekyll_install-post</id><content type="html" xml:base="http://localhost:4000/jekyll_install-post/">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-17T12:50:03-05:00</updated><id>http://localhost:4000/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Neo-HPSTR Theme Configuration</title><link href="http://localhost:4000/neo-hipster-theme-configuration-post/" rel="alternate" type="text/html" title="Neo-HPSTR Theme Configuration" /><published>2016-11-02T00:00:00-04:00</published><updated>2016-11-02T00:00:00-04:00</updated><id>http://localhost:4000/neo-hipster-theme-configuration-post</id><content type="html" xml:base="http://localhost:4000/neo-hipster-theme-configuration-post/">&lt;h2 id=&quot;neo-hpstr-features&quot;&gt;Neo-HPSTR Features&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Neo-HPSTR is a fully functional Jekyll Blog theme created by Michael Rose&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mademistakes.com/support/&quot;&gt;&lt;img style=&quot;border:0px;&quot; src=&quot;http://images.webestools.com/buttons.php?frm=1&amp;amp;btn_type=16&amp;amp;txt=Support%20the%20Developer&quot; onmouseover=&quot;this.src=&#39;http://images.webestools.com/buttons.php?frm=2&amp;amp;btn_type=16&amp;amp;txt=Support%20the%20Developer&#39;&quot; onmouseout=&quot;this.src=&#39;http://images.webestools.com/buttons.php?frm=1&amp;amp;btn_type=16&amp;amp;txt=Support%20the%20Developer&#39;;&quot; alt=&quot;Support%20the%20Developer&quot; /&gt;&lt;/a&gt;&lt;script type=&quot;text/javascript&quot;&gt;img=new Image();img.src= &quot;http://images.webestools.com/buttons.php?frm=2&amp;amp;btn_type=16&amp;amp;txt=Support%20the%20Developer&quot;;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modern and minimal design.&lt;/li&gt;
+  &lt;li&gt;Responsive templates for post, page, and post index &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt;. Looks great on mobile, tablet, and desktop devices.&lt;/li&gt;
+  &lt;li&gt;Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.&lt;/li&gt;
+  &lt;li&gt;Sweet animated menu with support for drop-downs.&lt;/li&gt;
+  &lt;li&gt;Optional &lt;a href=&quot;http://disqus.com&quot;&gt;Disqus&lt;/a&gt; comments and social sharing links.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.facebook.com/docs/opengraph/&quot;&gt;Open Graph&lt;/a&gt; and &lt;a href=&quot;https://dev.twitter.com/docs/cards&quot;&gt;Twitter Cards&lt;/a&gt; support for a better social sharing experience.&lt;/li&gt;
+  &lt;li&gt;Simple &lt;a href=&quot;http://mmistakes.github.io/hpstr-jekyll-theme/404.html&quot;&gt;custom 404 page&lt;/a&gt; to get you started.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/&quot;&gt;Syntax highlighting&lt;/a&gt; stylesheet to make your code examples look snazzy&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/cruznick/hpstr-jekyll-theme/tree/es&quot;&gt;Available in Spanish&lt;/a&gt;. Thanks &lt;a href=&quot;https://github.com/cruznick&quot;&gt;@cruznick&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;download-the-theme&quot;&gt;Download the Theme&lt;/h2&gt;
+&lt;p&gt;Navigate to your Desktop directory (Feel free to use any directory you want)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/Development/tutorials$ cd ~
+userone@laptop:~/Desktop$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip&quot;&gt;&lt;img style=&quot;border:0px;&quot; src=&quot;http://images.webestools.com/buttons.php?frm=1&amp;amp;btn_type=16&amp;amp;txt=Download%20the%20Theme&quot; onmouseover=&quot;this.src=&#39;http://images.webestools.com/buttons.php?frm=2&amp;amp;btn_type=16&amp;amp;txt=Download%20the%20Theme&#39;&quot; onmouseout=&quot;this.src=&#39;http://images.webestools.com/buttons.php?frm=1&amp;amp;btn_type=16&amp;amp;txt=Download%20the%20Theme&#39;;&quot; alt=&quot;Download%20the%20Theme&quot; /&gt;&lt;/a&gt;&lt;script type=&quot;text/javascript&quot;&gt;img=new Image();img.src= &quot;http://images.webestools.com/buttons.php?frm=2&amp;amp;btn_type=16&amp;amp;txt=Download%20the%20Theme&quot;;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the button or enter the following commands into the terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once the theme finishes downloading you need to extract it into the you want to work in.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+unzip ~/Desktop/hpstr-jekyll-theme-master/
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you did everything correctly you should now have a copy of Neo-HPSTR on in a folder called hpstr-jekyll-theme-master on your desktop.  The next section of the tutorial deals with configuring theme.  if you have not already installed jekyll and it’s dependencies please do that before preceeding. Link to &lt;a href=&quot;http://localhost:4000/neo-hipster-theme-configuration-post/&quot;&gt;Jekyll Install Tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-setup-and-configuration&quot;&gt;Basic Setup and Configuration&lt;/h2&gt;
+
+&lt;p&gt;After downloading Neo-HPSTR you can begin configuring the theme so it will run properly in Jekyll.  Open your terminal and navigate to the hpstr-jekyll-theme-master/ you created in the previous section of this tutorial. If you unipped it on your Desktop enter the following commands into the terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/Desktop$ cd ~/Desktop/hpstr-jekyll-theme-master/
+userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next you need to make install Bundler and all theme dependencies by entering the folowing commands into the 
+terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now to install the Neo-HPSTR’s dependencies&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;customizing-the-theme&quot;&gt;Customizing the Theme&lt;/h2&gt;
+
+&lt;p&gt;Once you have installed the theme’s dependencies you need to edit the ==_config.yml== YAML file to personalize your site.  Open the file with your favorite text editor and enter your personal information.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title:            Enter Your Sites Title
+description:      Provide a short description of your blog
+disqus_shortname: We will deal with Disqus in the next section leave blank for now.
+
+url: http://localhost:4000 The url must be set to localhost:4000 when running it locally and you will need to change this to your websites address before deploying our blog.  
+
+Owner/author information You must provide information for the name, bio, and email variables or some sections of the site will not function correctly.   
+owner:
+  name:           Enter Your Name
+  avatar:         avatar.jpg
+  bio:            Enter a short bio about yourself.
+  email:          Enter your email
+  # Social networking links used in footer. Update and remove as you like.
+  github:         github username
+  keybase:        keybase username
+  stackexchange:  you get the idea
+  linkedin:
+  instagram:   
+  google_plus:    for google plus make sure you put a + infront of your username
+
+
+timezone:    Change if not are not in the America/New_York time zone.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After editing the ==_config.yml== file make sure you save your changes before proceeding to the next step.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-jekyll&quot;&gt;Running Jekyll&lt;/h2&gt;
+
+&lt;p&gt;The preferred method for running Jekyll is with ==bundle exec jekyll “command option”==, but if you’re willing to deal gem conflicts feel free to go cowboy with a ==jekyll build== or ==jekyll serve==.  Once you have dealt with gem conflicts I assure you, you will have no problem typing a few more characters and launching the site using == bundle exec jekyll serve==
+That said, enter the following commands into the terminal and launch the site on your local server (http://localhost:4000).&lt;/p&gt;
+
+&lt;p&gt;In some cases you may want to rebuild your blog before launching it.  To do this you just need to run ==bundle exec jekyll build== before launching the site.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ bundle exec jekyll build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ bundle exec jekyll serve
+Configuration file: /home/userone/Development/jajb-master/_config.yml
+            Source: /home/userone/Development/jajb-master
+       Destination: /home/userone/Development/jajb-master/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.003 seconds.
+ Auto-regeneration: enabled for &#39;/home/userone/Development/jajb-master&#39;
+Configuration file: /home/userone/Development/jajb-master/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If the serve command executes without any errors you should be able to open up a browser and got to http://localhost:4000) and your new blog should load. If the command executes without an error but does not load in your browser the problem most likely is due to a misconfigured _config.yml file.  To fix this open the _config.yml file and make sure the url: setting is set to http://localhost:4000.&lt;/p&gt;
+
+&lt;p&gt;Good Job!  You can now see the fruits of your labor and naviate the default posting included in with the theme.  In the next section of this tutorial I will show you how to set up backgrounds, load avatars and wire up the advanced features in this blog.&lt;/p&gt;
+
+&lt;p&gt;If you made it this far into the tutorial and plan on using the theme for your blog then tell the developer thank you by making a donation.  Even if it’s only a few bucks I am sure it will be appreciated and if you wondering I don’t know the theme’s developer and will not benefit financially whatsoever from your donation.  However if you do donate all of us could benefit in the future because the developer might just put out another dope theme or some other FOSS for the world to use.&lt;/p&gt;
+
+&lt;p&gt;Information should be free not trademarked and copy written.&lt;/p&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&#39;s canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
+};
+*/
+(function() { // DON&#39;T EDIT BELOW THIS LINE
+var d = document, s = d.createElement(&#39;script&#39;);
+s.src = &#39;//jajb.disqus.com/embed.js&#39;;
+s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</content><category term="jekyll" /><category term="theme" /><category term="tutorial" /><category term="neo-hipster" /><category term="neo-hpstr" /><category term="disqus" /><category term="open graph" /><category term="developer" /><category term="mmistakes" /><category term="install" /><category term="configuration" /><summary>Neo-HPSTR Features</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;, &quot;feature&quot;=&gt;&quot;abstract-5.jpg&quot;}" /></entry><entry><title>Installing Jekyll</title><link href="http://localhost:4000/jekyll_install-post/" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://localhost:4000/jekyll_install-post</id><content type="html" xml:base="http://localhost:4000/jekyll_install-post/">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
 
 &lt;p&gt;Over the past few months I have spent countless hours scouring the web for tutorials that will help solidify my web develoment skills. The internet offers many free tutorials on just about every topic you can think.  After a few hours of searching and start or restarting variuos tutorials I figured out that not all web tutorials are created equal.  In light of this I thought I’d take the time to create a few up to date (As of 10/15/2016) tutorials that may help other web development students steer clear of google rabbit holes and stackoverflow loops.&lt;/p&gt;
 
