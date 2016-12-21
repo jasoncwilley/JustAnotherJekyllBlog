@@ -1,8 +1,13 @@
 # Menu navigation links
 
-- title: Portfolio
-  url: /portfolio/
+- title: portfolio
+  url: http://www.jajb.dystopian.website/portfolio.html
 
-- title: Current Interests
-  url: /interests/
+- title: randomness
+  url: http://www.jajb.dystopian.website/randomness.html
 
+- title: interests
+  url: http://www.jajb.dystopian.website/interests.html
+
+- title: pictures
+  url: http://www.jajb.dystopian.website/pictures/pictures.html

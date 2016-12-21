@@ -7,32 +7,37 @@ words_per_minute: 200
 # When testing locally leave blank or use http://localhost:4000
 #url: http://www.jajb.us.s3-website-us-east-1.amazonaws.com/
 url: http://localhost:4000
+#url: http://www.jajb.dystopian.website
+
+
 # Owner/author information
+
+
 owner:
   name:           Jay Willey
   avatar:         avatar.jpg
-  bio:            Time traveling technologist who is constantly reminded that curiousity is a double edged sword.      
+  bio:            Time traveling technologist who is constantly reminded that curiousity is a double edged sword.
   email:          el337one1@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  github:        jasoncwilley 
+  github:        jasoncwilley
   keybase:   starscape
-  stackexchange:  
-  linkedin:       
-  instagram:   jcdubbau   
+  stackexchange:
+  linkedin:
+  instagram:   jcdubbau
   google_plus: +el337one1@gmail.com
 
 # Background image to be tiled on all pages
 background: 18f3be9e.png
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics:
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
-future:      false  # publish future dated posts --  true, false (default) 
+future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
 gems:
@@ -45,7 +50,7 @@ sass:
   style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:   /:categories/:title
 
 # Amount of post to show on home page
 paginate: 5
@@ -58,9 +63,9 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-include: 
-  - .htaccess
-exclude: 
+include:
+  - htaccess
+exclude:
   - "*.less"
   - "*.sublime-project"
   - "*.sublime-workspace"
