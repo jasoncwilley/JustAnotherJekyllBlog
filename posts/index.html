@@ -4,6 +4,7 @@ title: All Posts
 description: "An archive of posts."
 comments: false
 image:
+    feature: abstract-10.jpg
     background: d50b0862.png
 ---
 
@@ -17,7 +18,7 @@ image:
       <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}.html" title="{{ post.title }}">{{ post.title }}</a></li>
 
     {% if forloop.last %}
       </ul>

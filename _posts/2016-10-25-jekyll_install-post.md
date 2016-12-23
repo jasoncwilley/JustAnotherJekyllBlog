@@ -5,8 +5,8 @@ description: "Examples and code for displaying images in posts."
 tags: [jekyll, install, tuturial, ruby, gem, bundle]
 comments: true
 image:
-  background: 18f3be9e.png
-  feature: abstract-3.jpg
+    feature: abstract-10.jpg
+    background: d50b0862.png
 ---
 
 ## Installing Jekyll 3.0+
