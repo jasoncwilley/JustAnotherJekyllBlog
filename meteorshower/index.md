@@ -1,6 +1,6 @@
 ---
 layout: page
-title: meteorshower
+title: 2017 Quadrantids Meteor Shower
 comment: True
 image:
     feature: abstract-10.jpg
