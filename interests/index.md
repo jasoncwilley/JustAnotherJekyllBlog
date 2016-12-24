@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Interests
+title: Current Interests
 image:
     feature: abstract-10.jpg
     background: d50b0862.png
