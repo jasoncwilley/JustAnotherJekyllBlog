@@ -1,14 +1,12 @@
 ---
-
 layout: page
 title: All About Me
 permalink: /about
-
 ---
 
 
-
-  <link rel="stylesheet" type="text/css" href="/assets/css/aboutme.css">
+ <head>
+  <link rel="stylesheet" href="/assets/css/aboutme.css">
   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
  </head>
     <header class="header">
