@@ -1,19 +1,17 @@
 ---
-layout: page
+
+layout: aboutpage
 title: All About Me
 permalink: /about
+comments: True
 ---
 
 
- <head>
-  <link rel="stylesheet" href="/assets/css/aboutme.css">
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
- </head>
-    <header class="header">
-       <div class="container">
-         <img class="profile-image img-responsive pull-left" src="/images/bodegabayrock.png" alt="">
+ 
+
+    <img class="profile-image img-responsive pull-left" src="/images/bodegabayrock.jpg" alt="">
      <div class="profile-content pull-left">
-             <img class="profile-image img-responsive pull-left" src="/images/bodegabayrock.png" alt="">
+             <img class="profile-image img-responsive pull-left" src="/images/bodegabayrock.jpg" alt="">
           <h1 class="name">Jay C. Willey</h1>
           <h3 class="desc">Web Developer</h3>
                 
