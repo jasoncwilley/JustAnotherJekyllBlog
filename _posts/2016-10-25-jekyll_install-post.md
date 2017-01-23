@@ -2,29 +2,29 @@
 layout: post
 title: "Installing Jekyll"
 description: "Examples and code for displaying images in posts."
-tags: [jekyll, install, tuturial, ruby, gem, bundle]
+tags: [jekyll, install, tutorial, ruby, gem, bundle]
 comments: true
 image:
-    feature: abstract-10.jpg
-    background: d50b0862.png
+  background: 18f3be9e.png
+
 ---
 
 ## Installing Jekyll 3.0+
 
 Over the past few months I have spent countless hours scouring the web for tutorials that will help solidify my web develoment skills. The internet offers many free tutorials on just about every topic you can think.  After a few hours of searching and start or restarting variuos tutorials I figured out that not all web tutorials are created equal.  In light of this I thought I'd take the time to create a few up to date (As of 10/15/2016) tutorials that may help other web development students steer clear of google rabbit holes and stackoverflow loops.  
 
-Before I start (and before you comment) I'd like to say that like anything else in life there are many ways to reach any desired end and that I am going to focus on what worked for me. If you choose to provide constructive criticism please take the time to explain why your way worked better for you so we all can learn. 
+Before I start (and before you comment) I'd like to say that like anything else in life there are many ways to reach any desired end and that I am going to focus on what worked for me. If you choose to provide constructive criticism please take the time to explain why your way worked better for you so we all can learn.
 
  OK, let's get started.
 
 
-## Jekyll Dependencies 
+## Jekyll Dependencies
 
 If you wanna create a simplistic but powerful blog like this one the first thing you are are going to have to do is make sure you have the tools to do the job.
 
 * Ruby (including development headers, v1.9.3+ for Jekyll 2 and v2+ for Jekyll 3)
 * RubyGems
-* NodeJS 
+* NodeJS
 * Python 2.7 (for Jekyll 2 and earlier) or Python 3+ for Jekyll 3+)
 
 First you will need to check and see if you have Ruby installed. Open your terminal and run.
@@ -95,10 +95,10 @@ The final dependecy is Python and since it comes pre-installed on all Ubuntu 14.
 
 ```
 userone@laptop:~/Desktop$ python
-Python 3.4.3 (default, Nov 17 2016, 01:08:31) 
+Python 3.4.3 (default, Nov 17 2016, 01:08:31)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 You should have all the dependencies installed and be able to install Jekyll without any errors.
@@ -144,6 +144,3 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
-
-
-

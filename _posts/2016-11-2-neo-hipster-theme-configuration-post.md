@@ -6,14 +6,13 @@ tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, deve
 comments: true
 image:
   background: 18f3be9e.png
-  feature: abstract-5.jpg
----
+  ---
 
 ## Neo-HPSTR Features
 
 * Neo-HPSTR is a fully functional Jekyll Blog theme created by Michael Rose
 
-<a href="https://mademistakes.com/support/"><img style="border:0px;" src="http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Support%20the%20Developer" onmouseover="this.src='http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Support%20the%20Developer'" onmouseout="this.src='http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Support%20the%20Developer';" alt="Support%20the%20Developer" /></a><script type="text/javascript">img=new Image();img.src= "http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Support%20the%20Developer";</script> 
+<a href="https://mademistakes.com/support/"><img style="border:0px;" src="http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Support%20the%20Developer" onmouseover="this.src='http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Support%20the%20Developer'" onmouseout="this.src='http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Support%20the%20Developer';" alt="Support%20the%20Developer" /></a><script type="text/javascript">img=new Image();img.src= "http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Support%20the%20Developer";</script>
 
 * Modern and minimal design.
 * Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
@@ -35,9 +34,9 @@ userone@laptop:~/Development/tutorials$ cd ~
 userone@laptop:~/Desktop$
 ```
 
-<a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip"><img style="border:0px;" src="http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Download%20the%20Theme" onmouseover="this.src='http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Download%20the%20Theme'" onmouseout="this.src='http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Download%20the%20Theme';" alt="Download%20the%20Theme" /></a><script type="text/javascript">img=new Image();img.src= "http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Download%20the%20Theme";</script> 
+<a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip"><img style="border:0px;" src="http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Download%20the%20Theme" onmouseover="this.src='http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Download%20the%20Theme'" onmouseout="this.src='http://images.webestools.com/buttons.php?frm=1&btn_type=16&txt=Download%20the%20Theme';" alt="Download%20the%20Theme" /></a><script type="text/javascript">img=new Image();img.src= "http://images.webestools.com/buttons.php?frm=2&btn_type=16&txt=Download%20the%20Theme";</script>
 
-Click the button or enter the following commands into the terminal. 
+Click the button or enter the following commands into the terminal.
 
 ```
 wget https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip
@@ -61,14 +60,14 @@ userone@laptop:~/Desktop$ cd ~/Desktop/hpstr-jekyll-theme-master/
 userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$
 ```
 
-Next you need to make install Bundler and all theme dependencies by entering the folowing commands into the 
+Next you need to make install Bundler and all theme dependencies by entering the folowing commands into the
 terminal.
 
 ```
 userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ gem install bundler
 ```
 
-Now to install the Neo-HPSTR's dependencies 
+Now to install the Neo-HPSTR's dependencies
 
 
 ```
@@ -78,7 +77,7 @@ userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ bundle install
 
 ## Customizing the Theme
 
-Once you have installed the theme's dependencies you need to edit the ==_config.yml== YAML file to personalize your site.  Open the file with your favorite text editor and enter your personal information. 
+Once you have installed the theme's dependencies you need to edit the ==_config.yml== YAML file to personalize your site.  Open the file with your favorite text editor and enter your personal information.
 
 ```
 title:            Enter Your Sites Title
@@ -125,7 +124,7 @@ Configuration file: /home/userone/Development/jajb-master/_config.yml
             Source: /home/userone/Development/jajb-master
        Destination: /home/userone/Development/jajb-master/_site
  Incremental build: disabled. Enable with --incremental
-      Generating... 
+      Generating...
                     done in 1.003 seconds.
  Auto-regeneration: enabled for '/home/userone/Development/jajb-master'
 Configuration file: /home/userone/Development/jajb-master/_config.yml
@@ -164,6 +163,3 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
-
-
-

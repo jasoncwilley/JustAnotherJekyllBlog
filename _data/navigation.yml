@@ -7,7 +7,7 @@
   url: http://www.jajb.dystopian.website/interests.html
 
 - title: Pictures
-  url: http://www.jajb.dystopian.website/pictures.html
+  url: 127.0.0.1:4000/photo-gallery.html
   
 - title: Random(ness)
   url: http://www.jajb.dystopian.website/randomness.html

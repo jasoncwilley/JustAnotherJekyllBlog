@@ -49,6 +49,11 @@ sass:
   sass_dir: _sass
   style: compressed
 
+collections:
+- photo_gallery
+
+
+
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 

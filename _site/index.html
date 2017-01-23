@@ -116,7 +116,7 @@
 	    <li><a href="http://www.jajb.dystopian.website/interests.html" target="_blank">Interests</a></li>
 	  
 	    
-	    <li><a href="http://www.jajb.dystopian.website/pictures.html" target="_blank">Pictures</a></li>
+	    <li><a href="127.0.0.1:4000/photo-gallery.html" >Pictures</a></li>
 	  
 	    
 	    <li><a href="http://www.jajb.dystopian.website/randomness.html" target="_blank">Random(ness)</a></li>
@@ -145,10 +145,6 @@
 <article class="hentry">
   <header>
     
-      <div class="entry-image-index">
-        <a href="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post.html" title="Neo-HPSTR Theme Configuration"><img src="http://www.jajb.dystopian.website/images/abstract-5.jpg" alt="Neo-HPSTR Theme Configuration"></a>
-      </div><!-- /.entry-image -->
-    
     <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2016-11-02T00:00:00-04:00"><a href="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post">November 02, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="http://www.jajb.dystopian.website/about/" title="About Jay Willey">Jay Willey</a></span></span>
       
@@ -161,11 +157,21 @@ Reading time ~4 minutesReading time ~4 minutes
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post.html" rel="bookmark" title="Neo-HPSTR Theme Configuration" itemprop="url">Neo-HPSTR Theme Configuration</a></h1>
+      <h1 class="entry-title"><a href="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post.html" rel="bookmark" title="Neo Hipster Theme Configuration Post" itemprop="url">Neo Hipster Theme Configuration Post</a></h1>
     
   </header>
   <div class="entry-content">
-    <h2 id="neo-hpstr-features">Neo-HPSTR Features</h2>
+    <hr />
+<p>layout: post
+title: “Neo-HPSTR Theme Configuration”
+description: “Tutorial on setting up the Neo-Hipster Jekyll Theme”
+tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, developer, mmistakes, install, configuration]
+comments: true
+image:
+  background: 18f3be9e.png
+  —</p>
+
+<h2 id="neo-hpstr-features">Neo-HPSTR Features</h2>
 
 <ul>
   <li>Neo-HPSTR is a fully functional Jekyll Blog theme created by Michael Rose</li>
@@ -218,7 +224,7 @@ userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$
 </code></pre>
 </div>
 
-<p>Next you need to make install Bundler and all theme dependencies by entering the folowing commands into the 
+<p>Next you need to make install Bundler and all theme dependencies by entering the folowing commands into the
 terminal.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>userone@laptop: ~/Desktop/hpstr-jekyll-theme-master$ gem install bundler
@@ -278,7 +284,7 @@ Configuration file: /home/userone/Development/jajb-master/_config.yml
             Source: /home/userone/Development/jajb-master
        Destination: /home/userone/Development/jajb-master/_site
  Incremental build: disabled. Enable with --incremental
-      Generating... 
+      Generating...
                     done in 1.003 seconds.
  Auto-regeneration: enabled for '/home/userone/Development/jajb-master'
 Configuration file: /home/userone/Development/jajb-master/_config.yml
@@ -295,38 +301,12 @@ Configuration file: /home/userone/Development/jajb-master/_config.yml
 
 <p>Information should be free not trademarked and copy written.</p>
 
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//jajb.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
 <article class="hentry">
   <header>
-    
-      <div class="entry-image-index">
-        <a href="http://www.jajb.dystopian.website/jekyll_install-post.html" title="Installing Jekyll"><img src="http://www.jajb.dystopian.website/images/abstract-10.jpg" alt="Installing Jekyll"></a>
-      </div><!-- /.entry-image -->
     
     <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2016-10-25T00:00:00-04:00"><a href="http://www.jajb.dystopian.website/jekyll_install-post">October 25, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="http://www.jajb.dystopian.website/about/" title="About Jay Willey">Jay Willey</a></span></span>
@@ -430,10 +410,10 @@ v6.9.2
 <p>The final dependecy is Python and since it comes pre-installed on all Ubuntu 14.04 systems. Check and make sure your have a working version by running the following command.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>userone@laptop:~/Desktop$ python
-Python 3.4.3 (default, Nov 17 2016, 01:08:31) 
+Python 3.4.3 (default, Nov 17 2016, 01:08:31)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.
-&gt;&gt;&gt; 
+&gt;&gt;&gt;
 </code></pre>
 </div>
 
@@ -520,10 +500,6 @@ Reading time ~1 minuteReading time ~1 minute
 
 <article class="hentry">
   <header>
-    
-      <div class="entry-image-index">
-        <a href="http://www.jajb.dystopian.website/code-highlighting-post.html" title="Syntax Highlighting Post"><img src="http://www.jajb.dystopian.website/images/abstract-10.jpg" alt="Syntax Highlighting Post"></a>
-      </div><!-- /.entry-image -->
     
     <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2013-08-16T00:00:00-04:00"><a href="http://www.jajb.dystopian.website/code-highlighting-post">August 16, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="http://www.jajb.dystopian.website/about/" title="About Jay Willey">Jay Willey</a></span></span>
@@ -635,10 +611,7 @@ Reading time ~1 minuteReading time ~1 minute
 
 <p>An example of a Gist embed below.</p>
 
-<noscript><pre>404: Not Found
-</pre></noscript>
-<script src="https://gist.github.com/mmistakes/6589546.js"> </script>
-
+<p>true<script src="https://gist.github.com/mmistakes/6589546.js"> </script></p>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
@@ -714,7 +687,7 @@ Reading time ~1 minuteReading time ~1 minute
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2016 Jay Willey. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
+    <span>&copy; 2017 Jay Willey. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
