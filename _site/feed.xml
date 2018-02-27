@@ -1,4 +1,269 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.jajb.dystopian.website/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.jajb.dystopian.website/" rel="alternate" type="text/html" /><updated>2017-01-23T02:29:28-05:00</updated><id>http://www.jajb.dystopian.website/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Neo Hipster Theme Configuration Post</title><link href="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post" rel="alternate" type="text/html" title="Neo Hipster Theme Configuration Post" /><published>2016-11-02T00:00:00-04:00</published><updated>2016-11-02T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/neo-hipster-theme-configuration-post">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.netcensorship.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.netcensorship.org/" rel="alternate" type="text/html" /><updated>2018-02-27T03:34:25-05:00</updated><id>http://www.netcensorship.org/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Conky Setup</title><link href="http://www.netcensorship.org/conky-install-and-config-post" rel="alternate" type="text/html" title="Conky Setup" /><published>2018-02-14T00:00:00-05:00</published><updated>2018-02-14T00:00:00-05:00</updated><id>http://www.netcensorship.org/conky-install-and-config-post</id><content type="html" xml:base="http://www.netcensorship.org/conky-install-and-config-post">&lt;p&gt;##Conky Install&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Conky is a system monitor software for the X Window System. It is available for GNU/Linux and FreeBSD. It is free software released under the terms of the GPL license. Conky is able to monitor many system variables including CPU, memory, swap, disk space, temperature, top, upload, download, system messages, and much more. It is extremely configurable, however, the configuration can be a little hard to understand. Conky is a fork of torsmo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;lt;a&lt;/p&gt;
+
+&lt;h2 id=&quot;download-the-theme&quot;&gt;Download the Theme&lt;/h2&gt;
+&lt;p&gt;Navigate to your Desktop directory (Feel free to use any directory you want)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/Development/tutorials$mkdir -p ~/.config/conky
+userone@laptop:~/Development/tutorials$
+yaourt -S conky
+userone@laptop:~/Desktop$
+conky -C &amp;gt; ~/.config/conky/conky.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;/a&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;a
+One of the nice features of conky is to pipe to your desktop some /var/log/ files to read all kinds of log messages. Most of these files can only be read by root, but running conky as root is not recommended, so you will need to add username to the log group:
+/a&amp;gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+userone@laptop:~/Desktop$
+usermod -aG log username
+&lt;/code&gt;
+Use the conkyrc files to configure your desktop.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/.config/conky/conkyrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can run multiple conkyrc files simultaneously.  I decided to create one for each side of the desktop.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/.config.conky/mintypc-leftside-conkyrc
+
+background yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+imlib_cache_size 0
+update_interval 1
+cpu_avg_samples 1nano ~/.config.conky/mintypc-leftside-conkyrc
+format_human_readable
+
+alignment top_left
+gap_x 0
+gap_y 0
+minimum_size 240 1080
+maximum_width 250
+
+own_window yes
+own_window_type desktop	# options are: normal/override/dock/desktop/panel
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_colour 333333
+own_window_argb_visual no
+own_window_argb_value 0
+
+border_inner_margin 0
+border_outer_margin 0
+
+default_bar_size 100 6
+draw_shades no
+default_shade_color 000000
+draw_outline no
+default_outline_color 000000
+draw_borders no
+draw_graph_borders yes
+default_graph_size 40,220
+show_graph_scale no
+show_graph_range no
+
+override_utf8_locale yes
+use_xft yes
+xftalpha 1
+uppercase no
+max_text_width 41
+
+default_color ffffff
+color1 ffffff
+color2 FF5A45
+color3 81CAE0
+color4 FF5A45
+TEXT
+# $sysname
+${goto 10}${color4}${font DejaVu Sans Mono:size=20} System Info${color}${font}
+${goto 10}
+${goto 10}${color4}${alignc}${font DejaVu Sans Mono:size=16}Kernel${color}${font}
+${goto 10}         $kernel${color}
+${goto 10}
+${goto 10}${color4}System Uptime:${color}   $uptime${color}
+${goto 10}
+          Desktop
+ ${goto 10}          ${color2}${desktop} of ${desktop_number}${color}
+#
+
+# cpu load/temp/graph
+${goto 10}${font DejaVu Sans Mono:size=11}${voffset 5}${color2}     CPU 1: ${cpu cpu1}%${alignr 10}${exec sensors|grep &#39;Core 0&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu1 20,210 FFFFFF FF5A45}
+${goto 10}${voffset 0}${color2}     CPU 2: ${cpu cpu2}%${alignr 10}${exec sensors|grep &#39;Core 1&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu3 20,210 66241C FF5A45}
+${goto 10}${voffset 5}${color2}     CPU 3: ${cpu cpu3}%${alignr 10}${exec sensors|grep &#39;Core 2&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu3 20,210 66241C FF5A45}
+${goto 10}${voffset 0}${color2}     CPU 4: ${cpu cpu4}%${alignr 10}${exec sensors|grep &#39;Core 3&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu4 20,210 66241C FF5A45}
+${goto 10}${voffset 5}${color2}     CPU 5: ${cpu cpu5}%${alignr 10}${exec sensors|grep &#39;Core 4&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu5 20,210 66241C FF5A45}
+${goto 10}${voffset 0}${color2}     CPU 6: ${cpu cpu6}%${alignr 10}${exec sensors|grep &#39;Core 5&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu6 20,210 66241C FF5A45}
+${goto 10}${voffset 5}${color2}     CPU 7: ${cpu cpu7}%${alignr 10}${exec sensors|grep &#39;Core 6&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu7 20,210 66241C FF5A45}
+${goto 10}${voffset 0}${color2}     CPU 8: ${cpu cpu8}%${alignr 10}${exec sensors|grep &#39;Core 7&#39;|awk &#39;{print $3}&#39;}
+${goto 10}${voffset -5}${color2}${cpugraph cpu8 20,210 66241C FF5A45}${font}
+# top processes
+${goto 10}
+${voffset -5}${color4}${alignc}${font DejaVu Sans Mono:size=16}Top Processes ${font}${color}
+${voffset 4}${color1}${goto 10}${top name 1}${alignr 10}${top cpu 1}%
+${goto 10}${voffset -2}${top name 2}${alignr 10}${top cpu 2}%
+${goto 10}${voffset -2}${top name 3}${alignr 10}${top cpu 3}%
+${goto 10}${voffset -2}${top name 4}${alignr 10}${top cpu 4}%${color}
+${goto 10}
+# top memory
+${voffset -5}${color4}${alignc}${font DejaVu Sans Mono:size=16}Memory Usage ${font}${color}
+${goto 10}${voffset 10}${color2}${goto 70}${color2}$membar${alignr 10}${color1}$memperc%
+${goto 10}${color1}${voffset -2}${font}${top_mem name 1}${alignr 10}${top mem 1}%
+${goto 10}${voffset -2}${top_mem name 2}${alignr 10}${top mem 2}%
+${goto 10}${voffset -2}${top_mem name 3}${alignr 10}${top mem 3}%
+${goto 10}${voffset -2}${top_mem name 4}${alignr 10}${top mem 4}%
+
+#network${font DejaVu Sans Mono:size=20}
+${voffset -2}${color4}${alignc}${font DejaVu Sans Mono:size=15}Network Information ${font}${color}
+${goto 10}
+${goto 10}${color1} LAN IP:   ${addr enp3s0}
+${goto 10}WAN IP:  ${execi 300 curl http://icanhazip.com}
+${goto 10} EXT IP:   ${execi 300 curl http://ipinfo.io/ip}${color}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now you need to create a conf file for the right side.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/.config.conky/mintypc-rightside-conkyrc
+background yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+imlib_cache_size 0
+update_interval 1
+cpu_avg_samples 1
+format_human_readable
+
+alignment top_right
+gap_x 0
+gap_y 0
+minimum_size 240 1080
+maximum_width 250
+
+own_window yes
+own_window_type desktop	# options are: normal/override/dock/desktop/panel
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_colour 333333
+own_window_argb_visual no
+own_window_argb_value 0
+
+border_inner_margin 0
+border_outer_margin 0
+
+default_bar_size 100 6
+draw_shades no
+default_shade_color 000000
+draw_outline no
+default_outline_color 000000
+draw_borders no
+draw_graph_borders yes
+default_graph_size 40,220
+show_graph_scale no
+show_graph_range no
+
+override_utf8_locale yes
+use_xft yes
+xftalpha 1
+uppercase no
+max_text_width 41
+
+default_color ffffff   
+color1 ffffff
+color2 FF5A45
+color3 81CAE0
+color4 FF5A45
+
+TEXT
+${color2}
+${color2}
+${color2}
+${color2}${goto 10}${font DejaVu Sans Mono:size=44}${time %H}${font DejaVu Sans Mono:size=24}${voffset -25}&#39;${time %M}${font DejaVu Sans Mono:size=12}${voffset -12}${time %S}
+${color2}
+${color2}${goto 85}${voffset 10}${font :size=10}${time %A}
+${color2}${goto 85}${voffset 1}${font :size=10}${time %d %B %Y}
+${color2}
+${color}${font RsbillsDng:size=16}${font}${font DejaVu Sans Mono:size=10}${execpi 3600 DJS=`date +%_d`; cal -m | sed &#39;1d&#39; | sed &#39;/./!d&#39; | sed &#39;s/$/                     /&#39; | fold -w 21 | sed -n &#39;/^.\{21\}/p&#39; | sed &#39;s/^/${alignc} /&#39; | sed /&quot; $DJS &quot;/s/&quot; $DJS &quot;/&quot; &quot;&#39;${color2}&#39;&quot;$DJS&quot;&#39;${color}&#39;&quot; &quot;/}${font}
+${color2}${font DejaVu Sans Mono:size=16} Music Player:${font}
+${color2}
+${color2}
+${color2}
+${color2}
+${color2}
+${color2}
+${color2}
+ ${color2}Artist : ${color}${execi 5 python2 /home/minty/.config/conky/anowplaying.py -a}
+ ${color2}Title  : ${color}${execi 5 python2 /home/minty/.config/conky/anowplaying.py -t}
+ ${color2}Album  : ${color}${execi 5 python2 /home/minty/.config/conky/anowplaying.py -l}
+ ${color2}Year   : ${color}${execi 5 python2 /home/minty/.config/conky/anowplaying.py -y}
+ ${color2}Bitrate: ${color}${execi 5 /home/minty/.config/conky/anowplaying.py  -b}kbit/s
+ ${execi 5 python2 /home/minty/.config/conky/anowplaying.py -c /tmp/cover.jpg}${image /tmp/cover.jpg -p 80,425 -s 110x110 -n}
+
+
+${color2}${font DejaVu Sans Mono:size=16} Updates Available:${font}${execi 3600 checkupdates | wc -l}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you did everything correctly you should now have a copy of Neo-HPSTR on in a folder called hpstr-jekyll-theme-master on your desktop.  The next section of the tutorial deals with configuring theme.  if you have not already installed jekyll and it’s dependencies please do that before preceeding. Link to &lt;a href=&quot;http://localhost:4000/neo-hipster-theme-configuration-post/&quot;&gt;Jekyll Install Tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;running-the-conkyrc-files&quot;&gt;Running the conkyrc files&lt;/h2&gt;
+
+&lt;p&gt;After creating the conkyrc conf files you can run them load the desktop.  To run the files enter the following commands into the terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/Desktop$ cd ~/.config/conky/
+userone@laptop:~/.config/conky/$ conky -c mintypc-leftside-conkyrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The left side should appear and now run the conkyrc file for the rightside of the screen.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;userone@laptop:~/.config/conky/$ conky -c mintypc-rightside-conkyrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Good Job!  You can now enjoy this conky setup or change the conkyrc conf files to meet your needs!&lt;/p&gt;
+
+&lt;p&gt;Information should be free not trademarked and copy written.&lt;/p&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&#39;s canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
+};
+*/
+(function() { // DON&#39;T EDIT BELOW THIS LINE
+var d = document, s = d.createElement(&#39;script&#39;);
+s.src = &#39;//jajb.disqus.com/embed.js&#39;;
+s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</content><category term="conky" /><category term="themes" /><category term="examples" /><category term="scripts" /><category term="install" /><category term="configuration" /><summary>##Conky Install</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;conkyrc.png&quot;}" /></entry><entry><title>Neo Hipster Theme Configuration Post</title><link href="http://www.netcensorship.org/neo-hipster-theme-configuration-post" rel="alternate" type="text/html" title="Neo Hipster Theme Configuration Post" /><published>2016-11-02T00:00:00-04:00</published><updated>2016-11-02T00:00:00-04:00</updated><id>http://www.netcensorship.org/neo-hipster-theme-configuration-post</id><content type="html" xml:base="http://www.netcensorship.org/neo-hipster-theme-configuration-post">&lt;hr /&gt;
 &lt;p&gt;layout: post
 title: “Neo-HPSTR Theme Configuration”
 description: “Tutorial on setting up the Neo-Hipster Jekyll Theme”
@@ -143,7 +408,7 @@ tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, deve
 comments: true
 image:
   background: 18f3be9e.png
-  —</summary></entry><entry><title>Installing Jekyll</title><link href="http://www.jajb.dystopian.website/jekyll_install-post" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/jekyll_install-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/jekyll_install-post">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
+  —</summary></entry><entry><title>Installing Jekyll</title><link href="http://www.netcensorship.org/jekyll_install-post" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://www.netcensorship.org/jekyll_install-post</id><content type="html" xml:base="http://www.netcensorship.org/jekyll_install-post">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
 
 &lt;p&gt;Over the past few months I have spent countless hours scouring the web for tutorials that will help solidify my web develoment skills. The internet offers many free tutorials on just about every topic you can think.  After a few hours of searching and start or restarting variuos tutorials I figured out that not all web tutorials are created equal.  In light of this I thought I’d take the time to create a few up to date (As of 10/15/2016) tutorials that may help other web development students steer clear of google rabbit holes and stackoverflow loops.&lt;/p&gt;
 
@@ -276,7 +541,7 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 })();
 &lt;/script&gt;
 
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</content><category term="jekyll" /><category term="install" /><category term="tutorial" /><category term="ruby" /><category term="gem" /><category term="bundle" /><summary>Installing Jekyll 3.0+</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Post with a Background Image</title><link href="http://www.jajb.dystopian.website/background-image" rel="alternate" type="text/html" title="Post with a Background Image" /><published>2013-10-26T00:00:00-04:00</published><updated>2013-10-26T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/background-image</id><content type="html" xml:base="http://www.jajb.dystopian.website/background-image">&lt;p&gt;Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.&lt;/p&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</content><category term="jekyll" /><category term="install" /><category term="tutorial" /><category term="ruby" /><category term="gem" /><category term="bundle" /><summary>Installing Jekyll 3.0+</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Post with a Background Image</title><link href="http://www.netcensorship.org/background-image" rel="alternate" type="text/html" title="Post with a Background Image" /><published>2013-10-26T00:00:00-04:00</published><updated>2013-10-26T00:00:00-04:00</updated><id>http://www.netcensorship.org/background-image</id><content type="html" xml:base="http://www.netcensorship.org/background-image">&lt;p&gt;Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.&lt;/p&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;filename.png&lt;/span&gt;
@@ -287,7 +552,7 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 
 &lt;p&gt;If you want to set a background image for the entire site just add &lt;code class=&quot;highlighter-rouge&quot;&gt;background: filename.png&lt;/code&gt; to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and BOOM — background images on every page!&lt;/p&gt;
 
-&lt;div xmlns:cc=&quot;http://creativecommons.org/ns#&quot; xmlns:dct=&quot;http://purl.org/dc/terms/&quot; about=&quot;http://subtlepatterns.com&quot; class=&quot;notice&quot;&gt;Background images from &lt;span property=&quot;dct:title&quot;&gt;Subtle Patterns&lt;/span&gt; (&lt;a rel=&quot;cc:attributionURL&quot; property=&quot;cc:attributionName&quot; href=&quot;http://subtlepatterns.com&quot;&gt;Subtle Patterns&lt;/a&gt;) / &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/div&gt;</content><category term="sample post" /><summary>Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;420ac4a5.png&quot;}" /></entry><entry><title>Syntax Highlighting Post</title><link href="http://www.jajb.dystopian.website/code-highlighting-post" rel="alternate" type="text/html" title="Syntax Highlighting Post" /><published>2013-08-16T00:00:00-04:00</published><updated>2013-08-16T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/code-highlighting-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/code-highlighting-post">&lt;p&gt;Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div xmlns:cc=&quot;http://creativecommons.org/ns#&quot; xmlns:dct=&quot;http://purl.org/dc/terms/&quot; about=&quot;http://subtlepatterns.com&quot; class=&quot;notice&quot;&gt;Background images from &lt;span property=&quot;dct:title&quot;&gt;Subtle Patterns&lt;/span&gt; (&lt;a rel=&quot;cc:attributionURL&quot; property=&quot;cc:attributionName&quot; href=&quot;http://subtlepatterns.com&quot;&gt;Subtle Patterns&lt;/a&gt;) / &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/div&gt;</content><category term="sample post" /><summary>Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;420ac4a5.png&quot;}" /></entry><entry><title>Syntax Highlighting Post</title><link href="http://www.netcensorship.org/code-highlighting-post" rel="alternate" type="text/html" title="Syntax Highlighting Post" /><published>2013-08-16T00:00:00-04:00</published><updated>2013-08-16T00:00:00-04:00</updated><id>http://www.netcensorship.org/code-highlighting-post</id><content type="html" xml:base="http://www.netcensorship.org/code-highlighting-post">&lt;p&gt;Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;gfm-code-blocks&quot;&gt;GFM Code Blocks&lt;/h3&gt;
 
@@ -381,7 +646,10 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 
 &lt;p&gt;An example of a Gist embed below.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/mmistakes/6589546.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/mmistakes/6589546.js&quot;&gt; &lt;/script&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
@@ -393,13 +661,13 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 
   
     
-      http://en.wikipedia.org/wiki/Syntax_highlighting &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Sample Link Post</title><link href="http://www.jajb.dystopian.website/sample-link-post" rel="alternate" type="text/html" title="Sample Link Post" /><published>2013-08-12T00:00:00-04:00</published><updated>2013-08-12T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/sample-link-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/sample-link-post">&lt;p&gt;This theme supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To use, just add &lt;code class=&quot;highlighter-rouge&quot;&gt;link: http://url-you-want-linked&lt;/code&gt; to the post’s YAML front matter and you’re done.&lt;/p&gt;</content><category term="sample post" /><category term="link post" /><summary>This theme supports link posts, made famous by John Gruber. To use, just add link: http://url-you-want-linked to the post’s YAML front matter and you’re done.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>A Post with a Video</title><link href="http://www.jajb.dystopian.website/video-post" rel="alternate" type="text/html" title="A Post with a Video" /><published>2013-06-25T00:00:00-04:00</published><updated>2013-06-25T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/video-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/video-post">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+      http://en.wikipedia.org/wiki/Syntax_highlighting &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Sample Link Post</title><link href="http://www.netcensorship.org/sample-link-post" rel="alternate" type="text/html" title="Sample Link Post" /><published>2013-08-12T00:00:00-04:00</published><updated>2013-08-12T00:00:00-04:00</updated><id>http://www.netcensorship.org/sample-link-post</id><content type="html" xml:base="http://www.netcensorship.org/sample-link-post">&lt;p&gt;This theme supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To use, just add &lt;code class=&quot;highlighter-rouge&quot;&gt;link: http://url-you-want-linked&lt;/code&gt; to the post’s YAML front matter and you’re done.&lt;/p&gt;</content><category term="sample post" /><category term="link post" /><summary>This theme supports link posts, made famous by John Gruber. To use, just add link: http://url-you-want-linked to the post’s YAML front matter and you’re done.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>A Post with a Video</title><link href="http://www.netcensorship.org/video-post" rel="alternate" type="text/html" title="A Post with a Video" /><published>2013-06-25T00:00:00-04:00</published><updated>2013-06-25T00:00:00-04:00</updated><id>http://www.netcensorship.org/video-post</id><content type="html" xml:base="http://www.netcensorship.org/video-post">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Video embeds are responsive and scale with the width of the main content block with the help of &lt;a href=&quot;http://fitvidsjs.com/&quot;&gt;FitVids&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;560&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;315&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><category term="sample post" /><category term="video" /><summary></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Post with Large Feature Image and Text</title><link href="http://www.jajb.dystopian.website/readability-feature-post" rel="alternate" type="text/html" title="Post with Large Feature Image and Text" /><published>2013-05-23T00:00:00-04:00</published><updated>2013-05-23T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/readability-feature-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/readability-feature-post">&lt;p&gt;This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+&lt;/div&gt;</content><category term="sample post" /><category term="video" /><summary></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Post with Large Feature Image and Text</title><link href="http://www.netcensorship.org/readability-feature-post" rel="alternate" type="text/html" title="Post with Large Feature Image and Text" /><published>2013-05-23T00:00:00-04:00</published><updated>2013-05-23T00:00:00-04:00</updated><id>http://www.netcensorship.org/readability-feature-post</id><content type="html" xml:base="http://www.netcensorship.org/readability-feature-post">&lt;p&gt;This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
 
 &lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
 
@@ -438,7 +706,7 @@ s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 
 &lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
 
-&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content><category term="sample post" /><category term="readability" /><summary>This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>A Post with Images</title><link href="http://www.jajb.dystopian.website/sample-post-images" rel="alternate" type="text/html" title="A Post with Images" /><published>2013-05-22T00:00:00-04:00</published><updated>2013-05-22T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/sample-post-images</id><content type="html" xml:base="http://www.jajb.dystopian.website/sample-post-images">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content><category term="sample post" /><category term="readability" /><summary>This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>A Post with Images</title><link href="http://www.netcensorship.org/sample-post-images" rel="alternate" type="text/html" title="A Post with Images" /><published>2013-05-22T00:00:00-04:00</published><updated>2013-05-22T00:00:00-04:00</updated><id>http://www.netcensorship.org/sample-post-images</id><content type="html" xml:base="http://www.netcensorship.org/sample-post-images">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
 
 &lt;h2 id=&quot;figures-for-images-or-video&quot;&gt;Figures (for images or video)&lt;/h2&gt;
 
@@ -554,7 +822,7 @@ Available values: [1..3].&lt;/li&gt;
     &lt;a href=&quot;http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
     
     &lt;figcaption&gt;Test images&lt;/figcaption&gt;
-&lt;/figure&gt;</content><category term="sample post" /><category term="images" /><category term="test" /><summary>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use figure with the appropriate class. Each instance of figure is auto-numbered and displayed in the caption.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Testing Readability with a Bunch of Text</title><link href="http://www.jajb.dystopian.website/readability-post" rel="alternate" type="text/html" title="Testing Readability with a Bunch of Text" /><published>2012-05-22T00:00:00-04:00</published><updated>2012-05-22T00:00:00-04:00</updated><id>http://www.jajb.dystopian.website/readability-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/readability-post">&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+&lt;/figure&gt;</content><category term="sample post" /><category term="images" /><category term="test" /><summary>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use figure with the appropriate class. Each instance of figure is auto-numbered and displayed in the caption.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Testing Readability with a Bunch of Text</title><link href="http://www.netcensorship.org/readability-post" rel="alternate" type="text/html" title="Testing Readability with a Bunch of Text" /><published>2012-05-22T00:00:00-04:00</published><updated>2012-05-22T00:00:00-04:00</updated><id>http://www.netcensorship.org/readability-post</id><content type="html" xml:base="http://www.netcensorship.org/readability-post">&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
 
 &lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
 
@@ -593,132 +861,4 @@ Available values: [1..3].&lt;/li&gt;
 
 &lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
 
-&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content><category term="sample post" /><category term="readability" /><category term="test" /><category term="intro" /><summary>Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry><entry><title>Sample Post</title><link href="http://www.jajb.dystopian.website/sample-post" rel="alternate" type="text/html" title="Sample Post" /><published>2011-03-10T00:00:00-05:00</published><updated>2011-03-10T00:00:00-05:00</updated><id>http://www.jajb.dystopian.website/sample-post</id><content type="html" xml:base="http://www.jajb.dystopian.website/sample-post">&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
-
-&lt;h1 id=&quot;heading-1&quot;&gt;Heading 1&lt;/h1&gt;
-
-&lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-3&quot;&gt;Heading 3&lt;/h3&gt;
-
-&lt;h4 id=&quot;heading-4&quot;&gt;Heading 4&lt;/h4&gt;
-
-&lt;h5 id=&quot;heading-5&quot;&gt;Heading 5&lt;/h5&gt;
-
-&lt;h6 id=&quot;heading-6&quot;&gt;Heading 6&lt;/h6&gt;
-
-&lt;h3 id=&quot;body-text&quot;&gt;Body text&lt;/h3&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
-
-&lt;p class=&quot;image-right&quot;&gt;&lt;img src=&quot;http://www.jajb.dystopian.website/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;. &lt;u&gt;Underline&lt;/u&gt;. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
-
-&lt;p&gt;HTML and &lt;abbr title=&quot;cascading stylesheets&quot;&gt;CSS&lt;abbr&gt; are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/abbr&gt;&lt;/abbr&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
-
-&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Item one
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-  &lt;li&gt;Item three&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;table rules=&quot;groups&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Foot1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Foot2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Foot3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
-
-&lt;p&gt;Syntax highlighting via Rouge&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Non Pygments code example&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;awesome&quot;&amp;gt;
-    &amp;lt;p&amp;gt;This is great isn&#39;t it?&amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
-
-&lt;p&gt;Make any link standout more when applying the &lt;code class=&quot;highlighter-rouge&quot;&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-success&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Success Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Primary Button&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;Warning Button&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Danger Button&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/a&gt;&lt;/div&gt;</content><category term="sample post" /><summary>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.jajb.dystopian.website{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry></feed>
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;</content><category term="sample post" /><category term="readability" /><category term="test" /><category term="intro" /><summary>Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.netcensorship.org{&quot;background&quot;=&gt;&quot;18f3be9e.png&quot;}" /></entry></feed>
