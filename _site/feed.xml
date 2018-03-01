@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.netcensorship.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.netcensorship.org/" rel="alternate" type="text/html" /><updated>2018-02-27T03:34:25-05:00</updated><id>http://www.netcensorship.org/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Conky Setup</title><link href="http://www.netcensorship.org/conky-install-and-config-post" rel="alternate" type="text/html" title="Conky Setup" /><published>2018-02-14T00:00:00-05:00</published><updated>2018-02-14T00:00:00-05:00</updated><id>http://www.netcensorship.org/conky-install-and-config-post</id><content type="html" xml:base="http://www.netcensorship.org/conky-install-and-config-post">&lt;p&gt;##Conky Install&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.netcensorship.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.netcensorship.org/" rel="alternate" type="text/html" /><updated>2018-02-28T22:24:07-05:00</updated><id>http://www.netcensorship.org/</id><title>Just Another Jekyll Blog</title><subtitle>Just Another Jekyll Blog</subtitle><entry><title>Conky Setup</title><link href="http://www.netcensorship.org/conky-install-and-config-post" rel="alternate" type="text/html" title="Conky Setup" /><published>2018-02-14T00:00:00-05:00</published><updated>2018-02-14T00:00:00-05:00</updated><id>http://www.netcensorship.org/conky-install-and-config-post</id><content type="html" xml:base="http://www.netcensorship.org/conky-install-and-config-post">&lt;p&gt;##Conky Install&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Conky is a system monitor software for the X Window System. It is available for GNU/Linux and FreeBSD. It is free software released under the terms of the GPL license. Conky is able to monitor many system variables including CPU, memory, swap, disk space, temperature, top, upload, download, system messages, and much more. It is extremely configurable, however, the configuration can be a little hard to understand. Conky is a fork of torsmo.&lt;/li&gt;
@@ -270,7 +270,7 @@ description: “Tutorial on setting up the Neo-Hipster Jekyll Theme”
 tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, developer, mmistakes, install, configuration]
 comments: true
 image:
-  background: 18f3be9e.png
+  background: v4truth.png
   —&lt;/p&gt;
 
 &lt;h2 id=&quot;neo-hpstr-features&quot;&gt;Neo-HPSTR Features&lt;/h2&gt;
@@ -407,7 +407,7 @@ description: “Tutorial on setting up the Neo-Hipster Jekyll Theme”
 tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, developer, mmistakes, install, configuration]
 comments: true
 image:
-  background: 18f3be9e.png
+  background: v4truth.png
   —</summary></entry><entry><title>Installing Jekyll</title><link href="http://www.netcensorship.org/jekyll_install-post" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2016-10-25T00:00:00-04:00</published><updated>2016-10-25T00:00:00-04:00</updated><id>http://www.netcensorship.org/jekyll_install-post</id><content type="html" xml:base="http://www.netcensorship.org/jekyll_install-post">&lt;h2 id=&quot;installing-jekyll-30&quot;&gt;Installing Jekyll 3.0+&lt;/h2&gt;
 
 &lt;p&gt;Over the past few months I have spent countless hours scouring the web for tutorials that will help solidify my web develoment skills. The internet offers many free tutorials on just about every topic you can think.  After a few hours of searching and start or restarting variuos tutorials I figured out that not all web tutorials are created equal.  In light of this I thought I’d take the time to create a few up to date (As of 10/15/2016) tutorials that may help other web development students steer clear of google rabbit holes and stackoverflow loops.&lt;/p&gt;

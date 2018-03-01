@@ -5,7 +5,7 @@ description: "Tutorial on setting up the Neo-Hipster Jekyll Theme"
 tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, developer, mmistakes, install, configuration]
 comments: true
 image:
-  background: 18f3be9e.png
+  background: v4truth.png
   ---
 
 ## Neo-HPSTR Features
