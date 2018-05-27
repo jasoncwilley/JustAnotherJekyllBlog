@@ -49,12 +49,12 @@
 				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 			</ul>
-
+	
 		{% for link in site.data.navigation %}
 	    {% if link.url contains 'http' %}
 	        {% assign domain = '' %}
 	        {% else %}
-	        {% assign domain = www.censorship.org %}
+	        {% assign domain = jajb.dystopian.website %}
 	    {% endif %}
 	    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 	  {% endfor %}

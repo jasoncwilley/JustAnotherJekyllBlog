@@ -4,8 +4,8 @@ title: "Conky Setup"
 description: "My Conkyrc Files"
 tags: [conky, themes, examples, scripts, install, configuration]
 comments: true
-image: 
-  background: conkyrc.png
+image:
+  background: cube.png
 ---
 
 ##Conky Install

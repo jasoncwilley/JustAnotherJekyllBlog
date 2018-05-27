@@ -6,26 +6,29 @@ words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 #url: http://www.jajb.us.s3-website-us-east-1.amazonaws.com/
-#url: http://localhost:4000
-url: http://www.netcensorship.org
+url: http://decryptmylife.xyz
+#baseurl: http://www.netcensorship.org
 
 
 # Owner/author information
+
+
 owner:
   name:           Jay Willey
   avatar:         avatar.jpg
   bio:            "Sometimes convential wisdom is just popular stupidity."
   email:          el337one1@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  github:    jasoncwilley
+  github:        jasoncwilley
   keybase:   starscape
   stackexchange:
   linkedin:
-  instagram:   jaycdubbau
+  instagram:   jcdubbau
   google_plus: +el337one1@gmail.com
+  twitter:  BillyLomax0001
 
 # Background image to be tiled on all pages
-background: v4truth.png
+background: cube.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
@@ -56,7 +59,7 @@ collections:
 permalink:   /:categories/:title
 
 # Amount of post to show on home page
-paginate: 2
+paginate: 1
 
 kramdown:
   input: GFM

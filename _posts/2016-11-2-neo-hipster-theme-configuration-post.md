@@ -6,7 +6,7 @@ tags: [jekyll, theme, tutorial, neo-hipster, neo-hpstr, disqus, open graph, deve
 comments: true
 image:
   background: v4truth.png
-  ---
+---
 
 ## Neo-HPSTR Features
 
