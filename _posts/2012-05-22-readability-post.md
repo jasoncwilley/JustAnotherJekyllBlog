@@ -4,7 +4,7 @@ title: "Testing Readability with a Bunch of Text"
 description: "A ton of text to test readability."
 tags: [sample post, readability, test, intro]
 image:
-  background: 18f3be9e.png
+  background: hexagon.png
 
   
 ---

@@ -1,13 +1,14 @@
-title:           Just Another Jekyll Blog
-description:      Just Another Jekyll Blog
+
+#title:           Just Another Jekyll Blog
+#description:      Just Another Jekyll Blog
 disqus_shortname: jajb.disqus.com
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 #url: http://www.jajb.us.s3-website-us-east-1.amazonaws.com/
-url: http://decryptmylife.xyz
-#baseurl: http://www.netcensorship.org
+#http://decryptmylife.xyz
+#baseurl: http://www.net
 
 
 # Owner/author information
@@ -51,7 +52,9 @@ sass:
   style: compressed
 
 collections:
-- photo_gallery
+  photos:
+
+
 
 
 
